@@ -117,6 +117,64 @@ h5 {
   font-size: 24px;
 }
 
+.leftText input[type=button]{
+  width: 160px;
+  height: 35px;
+  background: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #a18d6c;
+  font-family: 'Exo', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 1px;
+  margin-top: 20px;
+}
+
+
+.inputarea input{
+  width: 250px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.inputarea select{
+  width: 100px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.largeinputarea textarea{
+  width: 503px;
+  height: 125px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+  word-wrap: break-word;
+  margin-top: 5px;
+  resize: none;
+}
+
 .login{
   position: absolute;
   right: 10px;
@@ -316,57 +374,37 @@ a:link {
 </head>
 
 <div class="leftText">
-  <p>
-    <h5> Command List </h5>
+    <h5> Create New Command </h5> 
+    <div class="inputarea"> <br />
+     Name of Command File: &nbsp;
+      <input type="text" id="inputName" placeholder="Default.rb" />
+
+    </div>
+    <div class="largeinputarea"> <br />
+     Script to Run: &nbsp; <br />
+      <textarea rows="6" cols="34" wrap="hard" id="inputScript"> Sample Code </textarea>
+
+    </div>
+    <div class="inputarea"> <br />
+     Response if Successful: &nbsp;
+      <input type="text" id="inputResponse" placeholder="Success" />
+
+    </div>
+    <div class="inputarea"> <br />
+      Includes Media: &nbsp; &nbsp;
+      <select id="hasMedia">
+        <option value="false">False</option>
+        <option value="true">True</option>
+      </select>
+    </div>
+    <div class="inputarea"> <br />
+     Valid command triggers: &nbsp;
+      <input type="text" id="inputMatches" placeholder="custom script, cs" />
+
+    </div>
+    <input type="button" onclick="downloadRbFile();" value = "Create Script"> 
+
     <br/>
-  </p>
-      <ul>
-        <li> Hello World (or hw)
-          <ul>
-            <li> Says aloud "Hello World" using mac's 'say' command </li>
-          </ul>
-        </li>
-        <li> Say {message}
-          <ul>
-            <li> Says aloud {message} using mac's 'say' command </li>
-          </ul>
-        </li>
-        <li> Lock
-          <ul>
-            <li> Locks the computer </li>
-          </ul>
-        </li>
-        <li> Open {url}
-          <ul>
-            <li> Opens {url} in web browser </li>
-          </ul>
-        </li>
-        <li> Picture
-          <ul>
-            <li> Takes a picture using the computer's camera and sends it back </li>
-          </ul>
-        </li>
-        <li> Screenshot
-          <ul>
-            <li> Takes a screenshot of the computer's screen and sends it back </li>
-          </ul>
-        </li>
-        <li> Play {platform}
-          <ul>
-            <li> Runs {platform} music platform, playing whatever song is queued </li>
-          </ul>
-        </li>
-        <li> Set Volume {number}
-          <ul>
-            <li> Sets the volume to {number}, given it is an integer between 1 and 100 </li>
-          </ul>
-        </li>
-        <li> Type {text}
-          <ul>
-            <li> Types {text} to the screen </li>
-          </ul>
-        </li>
-      </ul>
 
 </div>
       
